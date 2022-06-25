@@ -8,18 +8,20 @@ export default function HorsesPage() {
   const [horses, setHorses] = useState([]);
   //after state, make useEffect
 
+  //call getHorse in this useEffect
   useEffect(() => {
     async function fetch() {
       const data = await getHorses();
+      //set horses to state
       setHorses(data);
-      console.log(data);
     }
 
     fetch();
   }, []);
 
   return (
-    <div>
+    <div> 
+      {/* when horses are in the state they drop down here to the horse list */}
       <HorsesList horses={horses}/>
     </div>
   );
