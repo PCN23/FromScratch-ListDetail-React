@@ -6,7 +6,7 @@ export default function HorsesList({ horses }) {
       {//map over the horses
         horses.map((horse, i) => 
           <div key={horses.winner + i + horse.id}>
-            <h2>{horse.winner}</h2>
+            <h2>{horse.dam}</h2>
             <p>{horse.sire}</p>
           </div>)
       }
@@ -14,3 +14,11 @@ export default function HorsesList({ horses }) {
     </div>
   );
 }
+
+// horses.map((horse, i) => 
+// <div key={horses.winner + i + horse.id}>
+//   <h2>{horse.dam}</h2>
+//   <p>{horse.sire}</p>
+// </div>)
+// }
+

@@ -1,9 +1,15 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
-export default function HorsesDetail() {
+export default function HorsesDetail({ id, winner, sire, dam }) {
   return (
-    <div>HorsesDetail
-      
-    </div>
+    <Link to={`/horse/${id}`}>
+      <div>
+        <p>{winner}</p>
+        <p>{sire}</p>
+        <p>{dam}</p>
+
+      </div>
+    </Link>
   );
 }
